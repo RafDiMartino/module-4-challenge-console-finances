@@ -99,7 +99,6 @@ Calculated by creating a new array with only the numbers,
 with the reduce method I have added the sum of all the numbers in the onlyNumber array
 into a new array netTotalAmmount
 */
-
 const onlyNumbers = []
 
 for (let i = 0; i < finances.length; i++) {
@@ -108,6 +107,26 @@ for (let i = 0; i < finances.length; i++) {
 
 const netTotalAmount = onlyNumbers.reduce((a, b) => a + b, 0)
 
+/*
+The greatest increase in profits (date and amount) over the entire period.
+The greatest decrease in losses (date and amount) over the entire period.
+Calculated by getting the highest and lowest number in the onlyNumbers array with
+the Math.max and Math.min methods. Finding the correspondent numbers in the dataset by looping through
+the dataset and pushing it to the maxIncrease and minIncrease variables with a conditional statement
+*/
+const highestNumber = Math.max.apply(null, onlyNumbers)
+const lowestNumber = Math.min.apply(null, onlyNumbers)
+let maxIncrease = []
+let maxDecrease = []
+for (let i = 0; i < finances.length; i++) {
+    if (finances[i][1] === highestNumber) {
+        maxIncrease.push(finances[i])
+        
+    } else if (finances[i][1] === lowestNumber){
+        maxDecrease.push(finances[i])
+    }
+    
+}
 
 // Adds the analisys to the HTML
 const analisys = document.querySelector(".analisys")
@@ -117,6 +136,8 @@ Financial Analisys<br>
 ---------------------------------<br>
 Total Months: ${totalMonths}<br>
 Total: $${netTotalAmount}<br>
+Greatest Increase in Profits: ${maxIncrease[0][0]} ($${maxIncrease[0][1]})<br>
+Greatest Decrease in Profits: ${maxDecrease[0][0]} ($${maxDecrease[0][1]})
 </p>
 `
 
@@ -127,5 +148,7 @@ Financial Analisys
 ---------------------------------
 Total Months: ${totalMonths}
 Total: $${netTotalAmount}
+Greatest Increase in Profits: ${maxIncrease[0][0]} ($${maxIncrease[0][1]})
+Greatest Decrease in Profits: ${maxDecrease[0][0]} ($${maxDecrease[0][1]})
 `
 )
