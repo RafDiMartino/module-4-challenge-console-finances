@@ -86,3 +86,26 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+
+// Total months
+// Calculated with the .lenght JavaScript property
+const totalMonths = finances.length
+
+// Adds the analisys to the HTML
+const analisys = document.querySelector(".analisys")
+analisys.innerHTML = `
+<p>
+Financial Analisys<br>
+---------------------------------<br>
+Total Months: ${totalMonths}<br>
+</p>
+`
+
+// Prints the analisys to the console
+console.log(
+`
+Financial Analisys
+---------------------------------
+Total Months: ${totalMonths}
+`
+)
