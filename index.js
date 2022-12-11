@@ -87,9 +87,27 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
-// Total months
-// Calculated with the .lenght JavaScript property
+/*
+The total number of months included in the dataset.
+Calculated with the .lenght JavaScript property
+*/
 const totalMonths = finances.length
+
+/*
+The net total amount of Profit/Losses over the entire period.
+Calculated by creating a new array with only the numbers,
+with the reduce method I have added the sum of all the numbers in the onlyNumber array
+into a new array netTotalAmmount
+*/
+
+const onlyNumbers = []
+
+for (let i = 0; i < finances.length; i++) {
+    onlyNumbers.push(finances[i][1])
+}
+
+const netTotalAmount = onlyNumbers.reduce((a, b) => a + b, 0)
+
 
 // Adds the analisys to the HTML
 const analisys = document.querySelector(".analisys")
@@ -98,6 +116,7 @@ analisys.innerHTML = `
 Financial Analisys<br>
 ---------------------------------<br>
 Total Months: ${totalMonths}<br>
+Total: $${netTotalAmount}<br>
 </p>
 `
 
@@ -107,5 +126,6 @@ console.log(
 Financial Analisys
 ---------------------------------
 Total Months: ${totalMonths}
+Total: $${netTotalAmount}
 `
 )
