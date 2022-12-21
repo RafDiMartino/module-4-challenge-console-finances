@@ -31,6 +31,8 @@ N/A
 ## Usage
 To see the results of this application on the console open the Chrome DevTools by pressing Command+Option+I (macOS) or Control+Shift+I (Windows). A console panel should open either below or to the side of the webpage in the browser.
 
+The Console Finances application is deployed on Github Pages so you can access it by clicking [here](https://rafdimartino.github.io/module-4-challenge-console-finances/)
+
 ## Credits
 N/A
 
