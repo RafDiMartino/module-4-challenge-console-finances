@@ -125,9 +125,9 @@ Total: ${totalProfit}
 
 Average Change: $${averageChangeInProfits.toFixed(2)}
 
-Greatest Increase in Profits: ${maxProfitMonth} $${maxProfit})
+Greatest Increase in Profits: ${maxProfitMonth} ($${maxProfit})
 
-Greatest Decrease in Profits: ${minProfitMonth} $${minProfit}}
+Greatest Decrease in Profits: ${minProfitMonth} ($${minProfit})
 
 `
 )
@@ -143,6 +143,6 @@ analisys.innerHTML =
 <p>Total Months: ${totalMonths}<p>
 <p>Total: ${totalProfit}<p>
 <p>Average Change: $${averageChangeInProfits.toFixed(2)}<p>
-<p>Greatest Increase in Profits: ${maxProfitMonth} $${maxProfit})<p>
-<p>Greatest Decrease in Profits: ${minProfitMonth} $${minProfit}}<p>
+<p>Greatest Increase in Profits: ${maxProfitMonth} ($${maxProfit})<p>
+<p>Greatest Decrease in Profits: ${minProfitMonth} ($${minProfit})<p>
 `
